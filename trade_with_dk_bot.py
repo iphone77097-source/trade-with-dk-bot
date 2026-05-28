@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 import logging
+import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, MessageHandler, filters, ContextTypes
 
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
 
-BOT_TOKEN = "8938791821:AAEkPQE9sbkeTPntzH8hkbTEPlf9ynlZKxY"
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 COMMUNITY_LINK = "https://t.me/+RsMmcyN2Gqk3MWU1"
 CHANNEL_LINK = "https://t.me/+7yojrr61-JE0OWJl"
 
